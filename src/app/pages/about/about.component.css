@@ -1,0 +1,265 @@
+.about-section {
+  background: transparent;
+  padding: 100px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--text-primary);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all 0.3s ease;
+}
+
+.fact:hover {
+  transform: translateY(-5px);
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.fact i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.fact h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.fact p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.timeline h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  padding-left: 60px;
+}
+
+.timeline-items {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline-items::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 4px solid var(--dark-bg);
+  z-index: 2;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline-content {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 3px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.timeline-subtitle {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.timeline-content p:last-child {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .about-content {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 968px) {
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .about-text h3,
+  .timeline h3 {
+    font-size: 1.8rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .timeline-items {
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-text h3,
+  .timeline h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .quick-facts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .fact {
+    padding: 15px;
+  }
+
+  .fact i {
+    font-size: 1.5rem;
+  }
+
+  .timeline-items {
+    padding-left: 25px;
+  }
+
+  .timeline-items::before {
+    left: 10px;
+  }
+
+  .timeline-dot {
+    left: -19px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-subtitle,
+  .timeline-date {
+    font-size: 0.85rem;
+  }
+}
+}

@@ -1,0 +1,97 @@
+/* Performance Optimization CSS */
+
+/* Remove blanket GPU acceleration - apply only where needed */
+.gpu-accelerated {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Optimize animations for performance */
+@keyframes optimizedFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -15px, 0);
+  }
+}
+
+@keyframes optimizedRotate {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* GPU Acceleration for animated elements */
+.animate-fadeInUp,
+.animate-slideInLeft,
+.animate-slideInRight,
+.animate-scaleIn,
+.animate-float,
+.animate-pulse {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize backdrop-filter usage */
+.glass,
+.card,
+.profile-circle {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shifts */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize font rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
+}
+
+/* Contain layout and paint */
+section {
+  contain: layout paint;
+}
+
+/* Optimize will-change usage */
+.orbit-ring,
+.particle,
+.profile-glow,
+.tech-float {
+  will-change: transform;
+}
+
+/* Remove will-change after animation */
+.animate-fadeInUp:not(:hover),
+.animate-slideInLeft:not(:hover),
+.animate-slideInRight:not(:hover) {
+  will-change: auto;
+}
