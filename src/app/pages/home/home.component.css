@@ -28,107 +28,18 @@
   will-change: transform, opacity;
 }
 
-.particle:nth-child(1) {
-  width: 4px;
-  height: 4px;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-  animation-duration: 15s;
-}
-
-.particle:nth-child(2) {
-  width: 6px;
-  height: 6px;
-  top: 40%;
-  left: 80%;
-  animation-delay: 2s;
-  animation-duration: 18s;
-}
-
-.particle:nth-child(3) {
-  width: 3px;
-  height: 3px;
-  top: 60%;
-  left: 15%;
-  animation-delay: 4s;
-  animation-duration: 20s;
-}
-
-.particle:nth-child(4) {
-  width: 5px;
-  height: 5px;
-  top: 80%;
-  left: 70%;
-  animation-delay: 1s;
-  animation-duration: 22s;
-}
-
-.particle:nth-child(5) {
-  width: 4px;
-  height: 4px;
-  top: 30%;
-  left: 50%;
-  animation-delay: 3s;
-  animation-duration: 17s;
-}
-
-.particle:nth-child(6) {
-  width: 7px;
-  height: 7px;
-  top: 50%;
-  left: 85%;
-  animation-delay: 5s;
-  animation-duration: 19s;
-}
-
-.particle:nth-child(7) {
-  width: 3px;
-  height: 3px;
-  top: 70%;
-  left: 30%;
-  animation-delay: 2.5s;
-  animation-duration: 16s;
-}
-
-.particle:nth-child(8) {
-  width: 5px;
-  height: 5px;
-  top: 90%;
-  left: 60%;
-  animation-delay: 4.5s;
-  animation-duration: 21s;
-}
+.particle:nth-child(1) { width: 4px; height: 4px; top: 20%; left: 10%; animation-duration: 15s; }
+.particle:nth-child(2) { width: 6px; height: 6px; top: 40%; left: 80%; animation-delay: 2s; animation-duration: 18s; }
+.particle:nth-child(3) { width: 3px; height: 3px; top: 60%; left: 15%; animation-delay: 4s; animation-duration: 20s; }
+.particle:nth-child(4) { width: 5px; height: 5px; top: 80%; left: 70%; animation-delay: 1s; animation-duration: 22s; }
 
 @keyframes particleFloat {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.6;
-  }
-  50% {
-    transform: translate(50px, -100px) scale(1.2);
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.3;
-  }
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0; }
+  50% { transform: translate(50px, -100px) scale(1.2); opacity: 0.8; }
 }
 
 /* Grid Background */
-.grid-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent);
-  -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 50%, black, transparent);
-}
+/* Grid removed to reduce file size */
 
 .hero-content {
   display: grid;
@@ -562,178 +473,42 @@
 }
 
 @media (max-width: 968px) {
-  .hero-section {
-    padding: 80px 0 40px 0;
-  }
-
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-    margin: 0 auto;
-  }
-
-  .hero-name {
-    font-size: 3rem;
-  }
-
-  .hero-title {
-    font-size: 1.5rem;
-    justify-content: center;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-stats {
-    justify-content: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .hero-image {
-    margin-top: 0;
-  }
-
-  .image-container {
-    height: 400px;
-  }
-
-  .profile-circle {
-    width: 280px;
-    height: 280px;
-    margin-top: 0;
-  }
-
-  .profile-image {
-    width: 160px;
-    height: 160px;
-  }
-
-  .orbit-ring.ring-1 {
-    width: 310px;
-    height: 310px;
-  }
-
-  .orbit-ring.ring-2 {
-    width: 340px;
-    height: 340px;
-  }
-
-  .tech-float {
-    width: 50px;
-    height: 50px;
-  }
-
-  .tech-logo {
-    width: 28px;
-    height: 28px;
-  }
+  .hero-section { padding: 80px 0 40px 0; }
+  .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; margin: 0 auto; }
+  .hero-name { font-size: 3rem; }
+  .hero-title { font-size: 1.5rem; justify-content: center; }
+  .hero-description { max-width: 100%; }
+  .hero-stats, .hero-buttons, .social-links { justify-content: center; }
+  .hero-image { margin-top: 0; }
+  .image-container { height: 400px; }
+  .profile-circle { width: 280px; height: 280px; margin-top: 0; }
+  .profile-image { width: 160px; height: 160px; }
+  .orbit-ring.ring-1 { width: 310px; height: 310px; }
+  .orbit-ring.ring-2 { width: 340px; height: 340px; }
+  .tech-float { width: 50px; height: 50px; }
+  .tech-logo { width: 28px; height: 28px; }
 }
 
 @media (max-width: 640px) {
-  .hero-section {
-    padding: 60px 0 30px 0;
-  }
-
-  .hero-greeting {
-    font-size: 1rem;
-  }
-
-  .hero-name {
-    font-size: 2.2rem;
-  }
-
-  .hero-title {
-    font-size: 1.1rem;
-    min-height: 50px;
-  }
-
-  .hero-description {
-    font-size: 0.95rem;
-  }
-
-  .hero-stats {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .stat-item {
-    min-width: 100px;
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-  }
-
-  .stat-divider {
-    display: none;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-
-  .social-links {
-    gap: 10px;
-  }
-
-  .social-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
-  }
-
-  .profile-circle {
-    width: 220px;
-    height: 220px;
-  }
-
-  .profile-image {
-    width: 130px;
-    height: 130px;
-  }
-
-  .orbit-ring.ring-1 {
-    width: 250px;
-    height: 250px;
-  }
-
-  .orbit-ring.ring-2 {
-    width: 280px;
-    height: 280px;
-  }
-
-  .tech-float {
-    width: 45px;
-    height: 45px;
-  }
-
-  .tech-logo {
-    width: 24px;
-    height: 24px;
-  }
-
-  .scroll-indicator {
-    bottom: 20px;
-  }
+  .hero-section { padding: 60px 0 30px 0; }
+  .hero-greeting { font-size: 1rem; }
+  .hero-name { font-size: 2.2rem; }
+  .hero-title { font-size: 1.1rem; min-height: 50px; }
+  .hero-description { font-size: 0.95rem; }
+  .hero-stats { gap: 15px; flex-wrap: wrap; }
+  .stat-item { min-width: 100px; }
+  .stat-number { font-size: 1.8rem; }
+  .stat-label { font-size: 0.75rem; }
+  .stat-divider { display: none; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+  .btn { width: 100%; padding: 12px 24px; font-size: 0.9rem; }
+  .social-links { gap: 10px; }
+  .social-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+  .profile-circle { width: 220px; height: 220px; }
+  .profile-image { width: 130px; height: 130px; }
+  .orbit-ring.ring-1 { width: 250px; height: 250px; }
+  .orbit-ring.ring-2 { width: 280px; height: 280px; }
+  .tech-float { width: 45px; height: 45px; }
+  .tech-logo { width: 24px; height: 24px; }
+  .scroll-indicator { bottom: 20px; }
 }
